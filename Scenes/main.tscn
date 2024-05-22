@@ -1,41 +1,41 @@
 [gd_scene load_steps=13 format=3 uid="uid://cxtklpfwgmym2"]
 
-[ext_resource type="Script" path="res://Soldier.cs" id="1_wl7fj"]
-[ext_resource type="Texture2D" uid="uid://crego5mo02mqd" path="res://Chracter Sprites/Soldier Walking/Soldier-Walk.png" id="2_1bjl0"]
+[ext_resource type="Script" path="res://Soldier.cs" id="1_l7qng"]
+[ext_resource type="Texture2D" uid="uid://crego5mo02mqd" path="res://Chracter Sprites/Soldier Walking/Soldier-Walk.png" id="2_thiv2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0d225"]
 size = Vector2(17, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5h1yt"]
-atlas = ExtResource("2_1bjl0")
+atlas = ExtResource("2_thiv2")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h6nik"]
-atlas = ExtResource("2_1bjl0")
+atlas = ExtResource("2_thiv2")
 region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x40r7"]
-atlas = ExtResource("2_1bjl0")
+atlas = ExtResource("2_thiv2")
 region = Rect2(200, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xfmci"]
-atlas = ExtResource("2_1bjl0")
+atlas = ExtResource("2_thiv2")
 region = Rect2(300, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uxwo4"]
-atlas = ExtResource("2_1bjl0")
+atlas = ExtResource("2_thiv2")
 region = Rect2(400, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gggrt"]
-atlas = ExtResource("2_1bjl0")
+atlas = ExtResource("2_thiv2")
 region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ed70p"]
-atlas = ExtResource("2_1bjl0")
+atlas = ExtResource("2_thiv2")
 region = Rect2(600, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o61fj"]
-atlas = ExtResource("2_1bjl0")
+atlas = ExtResource("2_thiv2")
 region = Rect2(700, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j88he"]
@@ -72,15 +72,19 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_wl7fj")
+[node name="SoldierBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_l7qng")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoldierBody2D"]
 position = Vector2(133.5, 81)
 shape = SubResource("RectangleShape2D_0d225")
 
-[node name="Soldier" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="Soldier" type="AnimatedSprite2D" parent="SoldierBody2D"]
 position = Vector2(134, 83)
 sprite_frames = SubResource("SpriteFrames_j88he")
 animation = &"walking"
 frame_progress = 0.502682
+
+[node name="SlimeBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlimeBody2D"]
