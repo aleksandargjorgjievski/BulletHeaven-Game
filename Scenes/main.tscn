@@ -1,10 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://cxtklpfwgmym2"]
+[gd_scene load_steps=20 format=3 uid="uid://cxtklpfwgmym2"]
 
-[ext_resource type="Script" path="res://Soldier.cs" id="1_l7qng"]
+[ext_resource type="Script" path="res://Scripts/Soldier.cs" id="1_l7qng"]
 [ext_resource type="Texture2D" uid="uid://crego5mo02mqd" path="res://Chracter Sprites/Soldier Walking/Soldier-Walk.png" id="2_thiv2"]
+[ext_resource type="Script" path="res://Scripts/Slime.cs" id="3_1trwi"]
+[ext_resource type="Texture2D" uid="uid://jdflw5aqd3as" path="res://Enemy Sprites/Slime/Slime.png" id="3_b5qnt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0d225"]
-size = Vector2(17, 18)
+size = Vector2(15, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5h1yt"]
 atlas = ExtResource("2_thiv2")
@@ -70,13 +72,45 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25dms"]
+size = Vector2(16, 12.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak1gd"]
+atlas = ExtResource("3_b5qnt")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4kdh"]
+atlas = ExtResource("3_b5qnt")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwu6v"]
+atlas = ExtResource("3_b5qnt")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_42j2b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak1gd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4kdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwu6v")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="SoldierBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_l7qng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SoldierBody2D"]
-position = Vector2(133.5, 81)
+position = Vector2(132.5, 81)
 shape = SubResource("RectangleShape2D_0d225")
 
 [node name="Soldier" type="AnimatedSprite2D" parent="SoldierBody2D"]
@@ -86,5 +120,14 @@ animation = &"walking"
 frame_progress = 0.502682
 
 [node name="SlimeBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("3_1trwi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SlimeBody2D"]
+position = Vector2(263, 135.75)
+shape = SubResource("RectangleShape2D_25dms")
+
+[node name="Slime" type="AnimatedSprite2D" parent="SlimeBody2D"]
+position = Vector2(263, 135)
+sprite_frames = SubResource("SpriteFrames_42j2b")
+animation = &"walking"
+frame_progress = 0.0073743
