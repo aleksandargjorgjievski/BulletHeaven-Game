@@ -1,17 +1,66 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxtklpfwgmym2"]
+[gd_scene load_steps=12 format=3 uid="uid://cxtklpfwgmym2"]
 
 [ext_resource type="Script" path="res://Soldier.cs" id="1_wl7fj"]
 [ext_resource type="Texture2D" uid="uid://crego5mo02mqd" path="res://Chracter Sprites/Soldier Walking/Soldier-Walk.png" id="2_1bjl0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_po0op"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5h1yt"]
 atlas = ExtResource("2_1bjl0")
 region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6nik"]
+atlas = ExtResource("2_1bjl0")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x40r7"]
+atlas = ExtResource("2_1bjl0")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfmci"]
+atlas = ExtResource("2_1bjl0")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxwo4"]
+atlas = ExtResource("2_1bjl0")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gggrt"]
+atlas = ExtResource("2_1bjl0")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed70p"]
+atlas = ExtResource("2_1bjl0")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o61fj"]
+atlas = ExtResource("2_1bjl0")
+region = Rect2(700, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j88he"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_po0op")
+"texture": SubResource("AtlasTexture_5h1yt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6nik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x40r7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfmci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxwo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gggrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed70p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o61fj")
 }],
 "loop": true,
 "name": &"walking",
@@ -25,9 +74,9 @@ script = ExtResource("1_wl7fj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="Soldier" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(134, 83)
 scale = Vector2(0.72, 0.72)
 sprite_frames = SubResource("SpriteFrames_j88he")
 animation = &"walking"
-frame_progress = 0.337318
+frame_progress = 0.502682

@@ -1,6 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716376570
+::res://::1716378520
 icon.svg::CompressedTexture2D::4983055484291208951::1716373491::1716373498::1::::<><>::
-::res://Chracter Sprites/::1716376633
-::res://Chracter Sprites/Soldier Walking/::1716376678
+Soldier.cs::CSharpScript::-1::1716378107::0::1::::<>CharacterBody2D<>::
+::res://Chracter Sprites/::1716377372
+main.tscn::PackedScene::6427035558631072595::1716377372::0::1::::<><>::res://Soldier.cs<>uid://crego5mo02mqd::::res://Chracter Sprites/Soldier Walking/Soldier-Walk.png
+::res://Chracter Sprites/Soldier Walking/::1716376681
 Soldier-Walk.png::CompressedTexture2D::5974700118228996347::1715357474::1716376681::1::::<><>::
