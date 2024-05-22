@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ljIGq1upwpaFEDi2oyuZT3pt1qoj9gGG03Wlg/w+huX4TZo/qURmnNEOjqmZZBjycXbQPzqFPVynpyNzTeYfnQ==",
+  "success": true,
+  "projectFilePath": "E:\\Godot Projects\\Bulletheaven Game\\Bulletheaven Game.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PC_PC\\.nuget\\packages\\godot.sourcegenerators\\4.2.2\\godot.sourcegenerators.4.2.2.nupkg.sha512",
+    "C:\\Users\\PC_PC\\.nuget\\packages\\godotsharp\\4.2.2\\godotsharp.4.2.2.nupkg.sha512",
+    "C:\\Users\\PC_PC\\.nuget\\packages\\godotsharpeditor\\4.2.2\\godotsharpeditor.4.2.2.nupkg.sha512",
+    "C:\\Users\\PC_PC\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\PC_PC\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\PC_PC\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

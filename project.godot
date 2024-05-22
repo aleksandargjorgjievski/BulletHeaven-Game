@@ -11,9 +11,20 @@ config_version=5
 [application]
 
 config/name="Bulletheaven Game"
-config/features=PackedStringArray("4.2", "Forward Plus")
+run/main_scene="res://Chracter Sprites/main.tscn"
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/stretch/mode="viewport"
 
 [dotnet]
 
 project/assembly_name="Bulletheaven Game"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
