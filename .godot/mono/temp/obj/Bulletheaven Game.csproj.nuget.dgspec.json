@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Godot Projects\\Bulletheaven Game\\Bulletheaven Game.csproj": {}
+    "D:\\Godot Projects\\BulletHeaven-Game\\Bulletheaven Game.csproj": {}
   },
   "projects": {
-    "E:\\Godot Projects\\Bulletheaven Game\\Bulletheaven Game.csproj": {
+    "D:\\Godot Projects\\BulletHeaven-Game\\Bulletheaven Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Godot Projects\\Bulletheaven Game\\Bulletheaven Game.csproj",
+        "projectUniqueName": "D:\\Godot Projects\\BulletHeaven-Game\\Bulletheaven Game.csproj",
         "projectName": "Bulletheaven Game",
-        "projectPath": "E:\\Godot Projects\\Bulletheaven Game\\Bulletheaven Game.csproj",
-        "packagesPath": "C:\\Users\\PC_PC\\.nuget\\packages\\",
-        "outputPath": "E:\\Godot Projects\\Bulletheaven Game\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "D:\\Godot Projects\\BulletHeaven-Game\\Bulletheaven Game.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "D:\\Godot Projects\\BulletHeaven-Game\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,15 +72,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
+              "version": "[6.0.28, 6.0.28]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
+              "version": "[6.0.28, 6.0.28]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
+              "version": "[6.0.28, 6.0.28]"
             }
           ],
           "frameworkReferences": {
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bulletheaven Game")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83b27d18d58cddde1fade66d35fe84adb602c6ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bfd6086295accd87a3815dee8762951933a049e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bulletheaven Game")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bulletheaven Game")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

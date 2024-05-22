@@ -1,7 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cxtklpfwgmym2"]
+[gd_scene load_steps=13 format=3 uid="uid://cxtklpfwgmym2"]
 
 [ext_resource type="Script" path="res://Soldier.cs" id="1_wl7fj"]
 [ext_resource type="Texture2D" uid="uid://crego5mo02mqd" path="res://Chracter Sprites/Soldier Walking/Soldier-Walk.png" id="2_1bjl0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0d225"]
+size = Vector2(17, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5h1yt"]
 atlas = ExtResource("2_1bjl0")
@@ -73,10 +76,11 @@ animations = [{
 script = ExtResource("1_wl7fj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(133.5, 81)
+shape = SubResource("RectangleShape2D_0d225")
 
 [node name="Soldier" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(134, 83)
-scale = Vector2(0.72, 0.72)
 sprite_frames = SubResource("SpriteFrames_j88he")
 animation = &"walking"
 frame_progress = 0.502682

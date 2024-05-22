@@ -14,10 +14,19 @@ public partial class Soldier : CharacterBody2D
 
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
+
+		if (Input.IsActionPressed("go_left") || Input.IsActionPressed("go_right"))
+		{
+			soldier.Play("walking");
+		}
+		else
+		{
+			soldier.Stop();
+		}
+
 		Vector2 direction = Input.GetVector("go_left", "go_right", "go_up", "go_down");
 		if (direction != Vector2.Zero)
 		{
-			soldier.Play("walking");
 			velocity.X = direction.X * Speed;
 		}
 		else
@@ -36,6 +45,7 @@ public partial class Soldier : CharacterBody2D
 
 		Velocity = velocity;
 
+		CharacterAnimation(Velocity);
 		MoveAndSlide();
 	}
 
