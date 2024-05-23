@@ -5,7 +5,10 @@ public partial class Soldier : CharacterBody2D
 {
 	public const float Speed = 50.0f;
 
-	// Get the gravity from the project settings to be synced with RigidBody nodes.
+	[Signal]
+	public delegate void SoldierPositionChangedEventHandler(Vector2 position);
+
+
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -45,6 +48,7 @@ public partial class Soldier : CharacterBody2D
 
 		Velocity = velocity;
 
+		EmitSignal(SignalName.SoldierPositionChanged, soldier.GlobalPosition);
 		CharacterAnimation(Velocity);
 		MoveAndSlide();
 	}

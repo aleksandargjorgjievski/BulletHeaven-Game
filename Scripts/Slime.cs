@@ -12,7 +12,6 @@ public partial class Slime : CharacterBody2D
 
 	public override void _Ready()
 	{
-	   	 player = GetNode<AnimatedSprite2D>("../SoldierBody2D/Soldier");
 		 slime = GetNode<AnimatedSprite2D>("Slime");
 	}
 
@@ -44,5 +43,6 @@ public partial class Slime : CharacterBody2D
 		}
 
 	}
+	
 }
 
