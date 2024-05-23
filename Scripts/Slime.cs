@@ -6,21 +6,43 @@ public partial class Slime : CharacterBody2D
 {
 	public const float Speed = 20.0f;
 	
+	public AnimatedSprite2D player;
+
+	public AnimatedSprite2D slime;
+
+	public override void _Ready()
+	{
+	   	 player = GetNode<AnimatedSprite2D>("../SoldierBody2D/Soldier");
+		 slime = GetNode<AnimatedSprite2D>("Slime");
+	}
+
+
 	public override void _PhysicsProcess(double delta)
 	{	
 		Vector2 velocity = Velocity;
 
-		AnimatedSprite2D player = GetNode<AnimatedSprite2D>("../SoldierBody2D/Soldier");
-		AnimatedSprite2D slime = GetNode<AnimatedSprite2D>("Slime");
-
-		Vector2 dir = (player.GlobalPosition - slime.GlobalPosition).Normalized();
-
-		velocity += dir * Speed * (float)delta;
+		velocity = slime.GlobalPosition.DirectionTo(player.GlobalPosition) * Speed;
 
 		Velocity = velocity;
 
+		AnimationPlayer(Velocity);
+
 		MoveAndSlide();
 		
+	}
+
+	public void AnimationPlayer(Vector2 velocity) {
+		slime.Play("walking");
+
+		if (velocity.X < 0)
+		{
+			slime.FlipH = false;
+		}
+		else if (velocity.X > 0)
+		{
+			slime.FlipH = true;
+		}
+
 	}
 }
 
