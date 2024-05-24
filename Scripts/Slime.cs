@@ -6,7 +6,7 @@ public partial class Slime : CharacterBody2D
 {
 	public const float Speed = 20.0f;
 	
-	public AnimatedSprite2D player;
+
 
 	public AnimatedSprite2D slime;
 
@@ -18,7 +18,11 @@ public partial class Slime : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{	
+		var player = GetTree().GetFirstNodeInGroup("players").GetNode<AnimatedSprite2D>("Soldier");
+
 		Vector2 velocity = Velocity;
+
+		GD.Print(slime.GlobalPosition);
 
 		velocity = slime.GlobalPosition.DirectionTo(player.GlobalPosition) * Speed;
 
