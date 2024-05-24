@@ -97,7 +97,7 @@ frame_progress = 0.502682
 curve = SubResource("Curve2D_4mj8x")
 
 [node name="EnemySpawnLocation" type="PathFollow2D" parent="EnemyPath"]
-position = Vector2(-9.67128, 53.7581)
+position = Vector2(-9.6713, 53.7535)
 rotation = -1.57587
 progress = 1002.24
 
