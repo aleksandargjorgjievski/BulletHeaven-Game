@@ -41,10 +41,8 @@ collision_mask = 0
 script = ExtResource("1_axl7x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(302, 20)
 shape = SubResource("RectangleShape2D_mgi26")
 
 [node name="Slime" type="AnimatedSprite2D" parent="."]
-position = Vector2(302, 19)
 sprite_frames = SubResource("SpriteFrames_rujr7")
 animation = &"walking"

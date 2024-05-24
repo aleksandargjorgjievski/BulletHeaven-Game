@@ -22,8 +22,6 @@ public partial class Slime : CharacterBody2D
 
 		Vector2 velocity = Velocity;
 
-		GD.Print(slime.GlobalPosition);
-
 		velocity = slime.GlobalPosition.DirectionTo(player.GlobalPosition) * Speed;
 
 		Velocity = velocity;
