@@ -8,6 +8,16 @@ public partial class Soldier : CharacterBody2D
 	[Signal]
 	public delegate void SoldierPositionChangedEventHandler(Vector2 position);
 
+	PackedScene arrow_scene;
+
+	Node2D arrow;
+
+	public override void _Ready()
+	{
+		arrow_scene = GD.Load<PackedScene>("res://Scenes/projectiles.tscn");
+
+		GetNode<Timer>("ArrowsTimer").Start();
+	}
 
 
 	public override void _PhysicsProcess(double delta)
@@ -26,6 +36,7 @@ public partial class Soldier : CharacterBody2D
 		{
 			soldier.Stop();
 		}
+
 
 		Vector2 direction = Input.GetVector("go_left", "go_right", "go_up", "go_down");
 		if (direction != Vector2.Zero)
@@ -65,5 +76,13 @@ public partial class Soldier : CharacterBody2D
 		{
 			soldier.FlipH = false;
 		}
+	}
+
+	private void OnArrowsTimerTimeout()
+	{
+		arrow = arrow_scene.Instantiate<Node2D>(); 
+		Owner.AddChild(arrow);
+		arrow.Transform = GetNode<Marker2D>("ProjectilesSpawnLocation").GlobalTransform;
+		GD.Print("SUP");
 	}
 }

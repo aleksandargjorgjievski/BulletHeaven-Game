@@ -31,8 +31,6 @@ public partial class main : Node2D
 
 		slime.Position = enemySpawnLocation.Position;
 
-		GD.Print("ProgressRatio: " + enemySpawnLocation.ProgressRatio);
-
 		AddChild(slime);
 	}
 
@@ -41,3 +39,6 @@ public partial class main : Node2D
 
 
 }
+
+
+
