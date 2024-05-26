@@ -113,6 +113,7 @@ wait_time = 2.0
 [node name="StartTimer" type="Timer" parent="."]
 one_shot = true
 
+[connection signal="child_exiting_tree" from="." to="." method="OnChildExitingTree"]
 [connection signal="timeout" from="SoldierBody2D/ArrowsTimer" to="SoldierBody2D" method="OnArrowsTimerTimeout"]
 [connection signal="timeout" from="EnemyTimer" to="." method="OnEnemyTimerTimeout"]
 [connection signal="timeout" from="StartTimer" to="." method="OnStartTimerTimeout"]

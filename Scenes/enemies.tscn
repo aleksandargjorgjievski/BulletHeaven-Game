@@ -35,12 +35,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SlimeBody2D" type="CharacterBody2D"]
+[node name="SlimeBody2D" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 2
-collision_mask = 0
+collision_mask = 2
 script = ExtResource("1_axl7x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_mgi26")
 
 [node name="Slime" type="AnimatedSprite2D" parent="."]

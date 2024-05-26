@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class projectiles : Area2D
 {
@@ -9,4 +10,23 @@ public partial class projectiles : Area2D
 	{
 		Position += Transform.X * speed * (float)delta;
 	}
+	
+
+	private void OnVisibleOnScreenNotifier2DScreenExited()
+	{
+		QueueFree();
+	}
+
+	private void OnBodyEntered(Node2D body)
+	{
+		if (body.IsInGroup("enemies"))
+		{
+			QueueFree();
+		}
+	}
+	
 }
+
+
+
+
