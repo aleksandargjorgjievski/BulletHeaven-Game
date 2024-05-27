@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://cxtklpfwgmym2"]
+[gd_scene load_steps=16 format=3 uid="uid://cxtklpfwgmym2"]
 
 [ext_resource type="Script" path="res://Scripts/Soldier.cs" id="1_l7qng"]
 [ext_resource type="Script" path="res://Scripts/main.cs" id="1_r213e"]
 [ext_resource type="Texture2D" uid="uid://crego5mo02mqd" path="res://Chracter Sprites/Soldier Walking/Soldier-Walk.png" id="2_thiv2"]
+[ext_resource type="Script" path="res://Scripts/GameTimeLabel.cs" id="4_newrq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0d225"]
 size = Vector2(15, 18)
@@ -112,6 +113,23 @@ wait_time = 2.0
 
 [node name="StartTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="GameTimer" type="Timer" parent="."]
+
+[node name="GameTimeLabel" type="Label" parent="."]
+offset_right = 321.0
+offset_bottom = 23.0
+script = ExtResource("4_newrq")
+
+[node name="GameTimeTextLabel" type="RichTextLabel" parent="GameTimeLabel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
 
 [connection signal="child_exiting_tree" from="." to="." method="OnChildExitingTree"]
 [connection signal="timeout" from="SoldierBody2D/ArrowsTimer" to="SoldierBody2D" method="OnArrowsTimerTimeout"]
