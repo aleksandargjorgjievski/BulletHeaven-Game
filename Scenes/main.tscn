@@ -86,17 +86,48 @@ script = ExtResource("1_r213e")
 script = ExtResource("1_l7qng")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SoldierBody2D"]
-position = Vector2(132.5, 81)
+position = Vector2(157.5, 88)
 shape = SubResource("RectangleShape2D_0d225")
 
 [node name="Soldier" type="AnimatedSprite2D" parent="SoldierBody2D"]
-position = Vector2(134, 83)
+position = Vector2(159, 90)
 sprite_frames = SubResource("SpriteFrames_j88he")
 animation = &"walking"
 frame_progress = 0.502682
 
+[node name="SoldierCamera" type="Camera2D" parent="SoldierBody2D"]
+position = Vector2(159, 90)
+
+[node name="GameTimeLabel" type="Label" parent="SoldierBody2D/SoldierCamera"]
+offset_left = -161.0
+offset_top = -90.0
+offset_right = 160.0
+offset_bottom = -67.0
+script = ExtResource("4_newrq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Seconds" type="RichTextLabel" parent="SoldierBody2D/SoldierCamera/GameTimeLabel"]
+layout_mode = 0
+offset_left = 156.0
+offset_right = 436.0
+offset_bottom = 280.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/normal_font = ExtResource("5_qwff0")
+theme_override_font_sizes/normal_font_size = 240
+text = "00"
+
+[node name="Minutes" type="RichTextLabel" parent="SoldierBody2D/SoldierCamera/GameTimeLabel"]
+layout_mode = 0
+offset_left = 141.0
+offset_right = 501.0
+offset_bottom = 280.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/normal_font = ExtResource("5_qwff0")
+theme_override_font_sizes/normal_font_size = 240
+text = "00"
+
 [node name="ProjectilesSpawnLocation" type="Marker2D" parent="SoldierBody2D"]
-position = Vector2(133, 81)
+position = Vector2(158, 88)
 
 [node name="ArrowsTimer" type="Timer" parent="SoldierBody2D"]
 wait_time = 2.0
@@ -114,31 +145,6 @@ wait_time = 2.0
 
 [node name="StartTimer" type="Timer" parent="."]
 one_shot = true
-
-[node name="GameTimeLabel" type="Label" parent="."]
-offset_right = 321.0
-offset_bottom = 23.0
-script = ExtResource("4_newrq")
-
-[node name="Seconds" type="RichTextLabel" parent="GameTimeLabel"]
-layout_mode = 0
-offset_left = 156.0
-offset_right = 436.0
-offset_bottom = 280.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/normal_font = ExtResource("5_qwff0")
-theme_override_font_sizes/normal_font_size = 240
-text = "00"
-
-[node name="Minutes" type="RichTextLabel" parent="GameTimeLabel"]
-layout_mode = 0
-offset_left = 141.0
-offset_right = 501.0
-offset_bottom = 280.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/normal_font = ExtResource("5_qwff0")
-theme_override_font_sizes/normal_font_size = 240
-text = "00"
 
 [connection signal="child_exiting_tree" from="." to="." method="OnChildExitingTree"]
 [connection signal="timeout" from="SoldierBody2D/ArrowsTimer" to="SoldierBody2D" method="OnArrowsTimerTimeout"]
