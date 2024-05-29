@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cxtklpfwgmym2"]
+[gd_scene load_steps=16 format=3 uid="uid://cxtklpfwgmym2"]
 
 [ext_resource type="Script" path="res://Scripts/Soldier.cs" id="1_l7qng"]
 [ext_resource type="Script" path="res://Scripts/main.cs" id="1_r213e"]
@@ -73,14 +73,37 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Curve2D" id="Curve2D_4mj8x"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -10, -11, 0, 0, 0, 0, 327, -11, 0, 0, 0, 0, 327, 186, 0, 0, 0, 0, -9, 186, 0, 0, 0, 0, -10, -11)
-}
-point_count = 5
-
 [node name="World" type="Node2D"]
 script = ExtResource("1_r213e")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="GameTimeLabel" type="Label" parent="HUD"]
+offset_left = -2.0
+offset_right = 319.0
+offset_bottom = 23.0
+script = ExtResource("4_newrq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Seconds" type="RichTextLabel" parent="HUD/GameTimeLabel"]
+layout_mode = 0
+offset_left = 156.0
+offset_right = 436.0
+offset_bottom = 280.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/normal_font = ExtResource("5_qwff0")
+theme_override_font_sizes/normal_font_size = 240
+text = "00"
+
+[node name="Minutes" type="RichTextLabel" parent="HUD/GameTimeLabel"]
+layout_mode = 0
+offset_left = 141.0
+offset_right = 501.0
+offset_bottom = 280.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/normal_font = ExtResource("5_qwff0")
+theme_override_font_sizes/normal_font_size = 240
+text = "00"
 
 [node name="SoldierBody2D" type="CharacterBody2D" parent="." groups=["players"]]
 script = ExtResource("1_l7qng")
@@ -91,54 +114,21 @@ shape = SubResource("RectangleShape2D_0d225")
 
 [node name="Soldier" type="AnimatedSprite2D" parent="SoldierBody2D"]
 position = Vector2(159, 90)
+scale = Vector2(1.06091, 1.06528)
 sprite_frames = SubResource("SpriteFrames_j88he")
 animation = &"walking"
 frame_progress = 0.502682
 
 [node name="SoldierCamera" type="Camera2D" parent="SoldierBody2D"]
-position = Vector2(159, 90)
-
-[node name="GameTimeLabel" type="Label" parent="SoldierBody2D/SoldierCamera"]
-offset_left = -161.0
-offset_top = -90.0
-offset_right = 160.0
-offset_bottom = -67.0
-script = ExtResource("4_newrq")
-metadata/_edit_use_anchors_ = true
-
-[node name="Seconds" type="RichTextLabel" parent="SoldierBody2D/SoldierCamera/GameTimeLabel"]
-layout_mode = 0
-offset_left = 156.0
-offset_right = 436.0
-offset_bottom = 280.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/normal_font = ExtResource("5_qwff0")
-theme_override_font_sizes/normal_font_size = 240
-text = "00"
-
-[node name="Minutes" type="RichTextLabel" parent="SoldierBody2D/SoldierCamera/GameTimeLabel"]
-layout_mode = 0
-offset_left = 141.0
-offset_right = 501.0
-offset_bottom = 280.0
-scale = Vector2(0.05, 0.05)
-theme_override_fonts/normal_font = ExtResource("5_qwff0")
-theme_override_font_sizes/normal_font_size = 240
-text = "00"
+position = Vector2(160, 90)
+rotation = 1.5708
+scale = Vector2(1.06091, 1.06528)
 
 [node name="ProjectilesSpawnLocation" type="Marker2D" parent="SoldierBody2D"]
 position = Vector2(158, 88)
 
 [node name="ArrowsTimer" type="Timer" parent="SoldierBody2D"]
 wait_time = 2.0
-
-[node name="EnemyPath" type="Path2D" parent="."]
-curve = SubResource("Curve2D_4mj8x")
-
-[node name="EnemySpawnLocation" type="PathFollow2D" parent="EnemyPath"]
-position = Vector2(-9.6713, 53.7535)
-rotation = -1.57587
-progress = 1002.24
 
 [node name="EnemyTimer" type="Timer" parent="."]
 wait_time = 2.0

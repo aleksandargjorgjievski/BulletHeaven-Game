@@ -4,7 +4,7 @@ using System.Numerics;
 
 public partial class Soldier : CharacterBody2D
 {
-	public const float Speed = 50.0f;
+	public const float Speed = 30.0f;
 
 	PackedScene arrow_scene;
 
