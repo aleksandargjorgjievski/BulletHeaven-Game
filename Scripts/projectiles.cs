@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 
 public partial class projectiles : Area2D
-{
-	public float speed = 30.0f;
+{	
+	[Export]
+	public float projectileDmg = 1;
+	public float speed = 75.0f;
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -16,17 +18,14 @@ public partial class projectiles : Area2D
 	{
 		QueueFree();
 	}
-
+	
 	private void OnBodyEntered(Node2D body)
 	{
 		if (body.IsInGroup("enemies"))
 		{
+			body.Call("LoseHP", projectileDmg);
 			QueueFree();
 		}
 	}
-	
 }
-
-
-
 

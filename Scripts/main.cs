@@ -5,6 +5,10 @@ using System.Security.Cryptography;
 public partial class main : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
+
+	[Export]
+	public float slimeHP = 2;
+
 	PackedScene slime_scene;
 	Node2D slime;
 
@@ -25,6 +29,7 @@ public partial class main : Node2D
 	private void OnEnemyTimerTimeout()
 	{
 		slime = slime_scene.Instantiate<Node2D>();
+
 		Random rnd = new Random();
 		int randomX = rnd.Next(0,210) * (rnd.Next(0, 2) * 2 - 1);
 		int randomY;

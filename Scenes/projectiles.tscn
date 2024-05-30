@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwsaf"]
 size = Vector2(12, 5)
 
-[node name="ArrowArea2D" type="Area2D"]
+[node name="ArrowArea2D" type="Area2D" groups=["projectiles"]]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_23yar")
