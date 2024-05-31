@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck72784ggypsi"]
+
+[ext_resource type="Texture2D" uid="uid://b6t3ocuqcuxku" path="res://UI Sprites/StartButton.png" id="1_c7wne"]
+[ext_resource type="Texture2D" uid="uid://dmnro2ksl13yv" path="res://UI Sprites/StartButtonHover.png" id="2_3s27e"]
+[ext_resource type="Script" path="res://Scripts/start_button.cs" id="3_3srt8"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -8.0
+offset_right = 32.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_c7wne")
+texture_pressed = ExtResource("2_3s27e")
+script = ExtResource("3_3srt8")
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/StartButton" to="HBoxContainer/VBoxContainer/StartButton" method="OnPressed"]
