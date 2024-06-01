@@ -448,17 +448,10 @@ position = Vector2(160, 90)
 rotation = 1.5708
 scale = Vector2(1.06091, 1.06528)
 
-<<<<<<< HEAD
-[node name="EnemySpawnLocation" type="PathFollow2D" parent="EnemyPath"]
-position = Vector2(-9.6713, 53.7535)
-rotation = -1.57587
-progress = 1002.24
-=======
 [node name="ProjectilesSpawnLocation" type="Marker2D" parent="SoldierBody2D"]
 position = Vector2(158, 88)
 
 [node name="ArrowsTimer" type="Timer" parent="SoldierBody2D"]
->>>>>>> dev
 
 [node name="EnemyTimer" type="Timer" parent="."]
 wait_time = 2.0
