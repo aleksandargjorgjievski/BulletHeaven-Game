@@ -4,7 +4,7 @@ using System.Numerics;
 
 public partial class Soldier : CharacterBody2D
 {
-	public const float Speed = 30.0f;
+	public const float Speed = 33.0f;
 
 	public int xp_value = 0;
 

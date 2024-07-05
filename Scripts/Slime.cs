@@ -60,6 +60,7 @@ public partial class Slime : CharacterBody2D
 	{
 		slimeHP -= projectileDmg;
 		hitAnimation.Play("hit");
+
 		if (slimeHP <= 0)
 		{
 			xp_scene = GD.Load<PackedScene>("res://Scenes/experience.tscn");

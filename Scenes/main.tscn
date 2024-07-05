@@ -1,9 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://cxtklpfwgmym2"]
+[gd_scene load_steps=22 format=3 uid="uid://cxtklpfwgmym2"]
 
 [ext_resource type="Script" path="res://Scripts/Soldier.cs" id="1_l7qng"]
 [ext_resource type="Script" path="res://Scripts/main.cs" id="1_r213e"]
 [ext_resource type="Texture2D" uid="uid://crego5mo02mqd" path="res://Chracter Sprites/Soldier Walking/Soldier-Walk.png" id="2_thiv2"]
+[ext_resource type="PackedScene" uid="uid://h5440vyfk874" path="res://Scenes/green_slime.tscn" id="2_x3miv"]
+[ext_resource type="PackedScene" uid="uid://dkc80rd2lks8q" path="res://Scenes/blue_slime.tscn" id="3_vwfv5"]
 [ext_resource type="Script" path="res://Scripts/GameTimeLabel.cs" id="4_newrq"]
+[ext_resource type="PackedScene" uid="uid://cx67t6xm52giw" path="res://Scenes/red_slime.tscn" id="4_x2wr5"]
 [ext_resource type="FontFile" uid="uid://ba07xvs0e5ayo" path="res://Fonts/VT323-Regular.ttf" id="5_qwff0"]
 [ext_resource type="Texture2D" uid="uid://do7dq8b6u82cv" path="res://World Tilesets/16x16.png" id="6_byo30"]
 
@@ -396,6 +399,7 @@ sources/2 = SubResource("TileSetAtlasSource_hq62m")
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_r213e")
+Scenes = Array[PackedScene]([ExtResource("2_x3miv"), ExtResource("3_vwfv5"), ExtResource("4_x2wr5")])
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
