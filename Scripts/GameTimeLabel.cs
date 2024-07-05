@@ -25,7 +25,7 @@ public partial class GameTimeLabel : Label
 
 	public void StopClock (int minutes)
 	{
-		if (minutes >= 10)
+		if (minutes >= 3)
 		{
 			SetProcess(false);
 		}

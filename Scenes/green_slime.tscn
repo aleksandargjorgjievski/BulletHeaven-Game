@@ -6,29 +6,29 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mgi26"]
 size = Vector2(14, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jqvom"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_va1vk"]
 atlas = ExtResource("1_tic3j")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ambua"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsudk"]
 atlas = ExtResource("1_tic3j")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l1lwn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft8um"]
 atlas = ExtResource("1_tic3j")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_rujr7"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ddq6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jqvom")
+"texture": SubResource("AtlasTexture_va1vk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ambua")
+"texture": SubResource("AtlasTexture_gsudk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l1lwn")
+"texture": SubResource("AtlasTexture_ft8um")
 }],
 "loop": true,
 "name": &"walking",
@@ -60,13 +60,14 @@ _data = {
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_axl7x")
+slimeHP = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_mgi26")
 
 [node name="Slime" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_rujr7")
+sprite_frames = SubResource("SpriteFrames_2ddq6")
 animation = &"walking"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

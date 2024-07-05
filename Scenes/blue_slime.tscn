@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkc80rd2lks8q"]
+
+[ext_resource type="PackedScene" uid="uid://h5440vyfk874" path="res://Scenes/green_slime.tscn" id="1_i3qgv"]
+[ext_resource type="Texture2D" uid="uid://c5nop0qwtg1ft" path="res://Enemy Sprites/Slime/Blue-Slime-sheet.png" id="2_6kp56"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfrod"]
+atlas = ExtResource("2_6kp56")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_highj"]
+atlas = ExtResource("2_6kp56")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6m8n"]
+atlas = ExtResource("2_6kp56")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pecaq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfrod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_highj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6m8n")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="BlueSlimeBody2D" instance=ExtResource("1_i3qgv")]
+slimeHP = 3.0
+
+[node name="Slime" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_pecaq")
