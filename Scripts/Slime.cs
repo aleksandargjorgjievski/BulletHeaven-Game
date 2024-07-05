@@ -11,9 +11,14 @@ public partial class Slime : CharacterBody2D
 	private float slimeHP = 2;
 	public const float Speed = 20.0f;
 
+	public Node2D xp;
+
 	public AnimatedSprite2D slime;
 
 	public AnimationPlayer hitAnimation;
+
+	public PackedScene xp_scene;
+	
 	public override void _Ready()
 	{
 		slime = GetNode<AnimatedSprite2D>("Slime");
@@ -57,7 +62,11 @@ public partial class Slime : CharacterBody2D
 		hitAnimation.Play("hit");
 		if (slimeHP <= 0)
 		{
-			QueueFree();
+			xp_scene = GD.Load<PackedScene>("res://Scenes/experience.tscn");
+			xp = xp_scene.Instantiate<Node2D>();
+			GetNode<Node2D>("/root/World/PickUps").CallDeferred("add_child", xp);
+			xp.GlobalPosition = GlobalPosition;
+			QueueFree();	
 		}
 	}
 }

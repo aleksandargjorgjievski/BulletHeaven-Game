@@ -6,16 +6,25 @@ public partial class Soldier : CharacterBody2D
 {
 	public const float Speed = 30.0f;
 
+	public int xp_value = 0;
+
+	public int max_xp_value = 5;
+
 	PackedScene arrow_scene;
 
 	Node2D arrow;
 
 	AnimatedSprite2D soldier;
 
+	RichTextLabel xp_text;
+
+	RichTextLabel max_xp_text;
 	public override void _Ready()
 	{
 		arrow_scene = GD.Load<PackedScene>("res://Scenes/projectiles.tscn");
 		soldier = GetNode<AnimatedSprite2D>("Soldier");
+		xp_text = GetNode<RichTextLabel>("/root/World/HUD/XPLabel/Value");
+		max_xp_text = GetNode<RichTextLabel>("/root/World/HUD/XPLabel/MaxValue");
 		GetNode<Timer>("ArrowsTimer").Start();
 	}
 
@@ -120,5 +129,18 @@ public partial class Soldier : CharacterBody2D
 		arrow = arrow_scene.Instantiate<Node2D>(); 
 		Owner.AddChild(arrow);
 		arrow.Transform = GetNode<Marker2D>("ProjectilesSpawnLocation").GlobalTransform;
+	}
+
+	public void IncreaseXP (int xpGain)
+	{
+		xp_value += xpGain;
+		xp_text.Text = xp_value.ToString("0/");
+		if (xp_value >= max_xp_value)
+		{
+			xp_value = 0;
+			xp_text.Text = xp_value.ToString("0/");
+			max_xp_value += 1;
+		}
+		max_xp_text.Text = max_xp_value.ToString();
 	}
 }
