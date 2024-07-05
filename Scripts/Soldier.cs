@@ -16,8 +16,10 @@ public partial class Soldier : CharacterBody2D
 
 	AnimatedSprite2D soldier;
 
-	RichTextLabel xp_text;
+	AudioStreamPlayer2D LevelUpPlayer;
 
+	RichTextLabel xp_text;
+	
 	RichTextLabel max_xp_text;
 	public override void _Ready()
 	{
@@ -25,6 +27,7 @@ public partial class Soldier : CharacterBody2D
 		soldier = GetNode<AnimatedSprite2D>("Soldier");
 		xp_text = GetNode<RichTextLabel>("/root/World/HUD/XPLabel/Value");
 		max_xp_text = GetNode<RichTextLabel>("/root/World/HUD/XPLabel/MaxValue");
+		LevelUpPlayer = GetNode<AudioStreamPlayer2D>("/root/World/LevelUpPlayer");
 		GetNode<Timer>("ArrowsTimer").Start();
 	}
 
@@ -137,6 +140,7 @@ public partial class Soldier : CharacterBody2D
 		xp_text.Text = xp_value.ToString("0/");
 		if (xp_value >= max_xp_value)
 		{
+			LevelUpPlayer.Play();
 			xp_value = 0;
 			xp_text.Text = xp_value.ToString("0/");
 			max_xp_value += 1;
