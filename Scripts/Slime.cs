@@ -73,5 +73,6 @@ public partial class Slime : CharacterBody2D
 			QueueFree();	
 		}
 	}
+	
 }
 
