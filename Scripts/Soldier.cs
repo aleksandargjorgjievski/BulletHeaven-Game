@@ -6,9 +6,15 @@ public partial class Soldier : CharacterBody2D
 {
 	public const float Speed = 33.0f;
 
+	public int max_hp = 3;
+
+	public int hp;
+
 	public int xp_value = 0;
 
 	public int max_xp_value = 5;
+
+	ProgressBar hp_bar;
 
 	PackedScene arrow_scene;
 
@@ -28,6 +34,10 @@ public partial class Soldier : CharacterBody2D
 		xp_text = GetNode<RichTextLabel>("/root/World/HUD/XPLabel/Value");
 		max_xp_text = GetNode<RichTextLabel>("/root/World/HUD/XPLabel/MaxValue");
 		LevelUpPlayer = GetNode<AudioStreamPlayer2D>("/root/World/LevelUpPlayer");
+		hp_bar = GetNode<ProgressBar>("../HUD/HPBar");
+		hp_bar.MaxValue = max_hp;
+		hp = max_hp;
+		SetHpBar();
 		GetNode<Timer>("ArrowsTimer").Start();
 	}
 
@@ -132,6 +142,17 @@ public partial class Soldier : CharacterBody2D
 		arrow = arrow_scene.Instantiate<Node2D>(); 
 		Owner.AddChild(arrow);
 		arrow.Transform = GetNode<Marker2D>("ProjectilesSpawnLocation").GlobalTransform;
+	}
+
+	public void SetHpBar()
+	{
+		hp_bar.Value = hp;
+	}
+
+	public void TakeDamage ()
+	{
+		hp -= 1;
+		SetHpBar();
 	}
 
 	public void IncreaseXP (int xpGain)

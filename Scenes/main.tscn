@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cxtklpfwgmym2"]
+[gd_scene load_steps=27 format=3 uid="uid://cxtklpfwgmym2"]
 
 [ext_resource type="Script" path="res://Scripts/Soldier.cs" id="1_l7qng"]
 [ext_resource type="Script" path="res://Scripts/main.cs" id="1_r213e"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Scripts/GameTimeLabel.cs" id="4_newrq"]
 [ext_resource type="PackedScene" uid="uid://cx67t6xm52giw" path="res://Scenes/red_slime.tscn" id="4_x2wr5"]
 [ext_resource type="FontFile" uid="uid://ba07xvs0e5ayo" path="res://Fonts/VT323-Regular.ttf" id="5_qwff0"]
+[ext_resource type="Script" path="res://Scripts/HPBar.cs" id="5_uytog"]
 [ext_resource type="Texture2D" uid="uid://do7dq8b6u82cv" path="res://World Tilesets/16x16.png" id="6_byo30"]
 [ext_resource type="AudioStream" uid="uid://q717mvp0a6oy" path="res://Sounds/Slime_hit.wav" id="10_h6i06"]
 [ext_resource type="AudioStream" uid="uid://ijos6c80prmp" path="res://Sounds/XP_pickup.wav" id="11_pc1qo"]
@@ -406,6 +407,16 @@ script = ExtResource("1_r213e")
 Scenes = Array[PackedScene]([ExtResource("2_x3miv"), ExtResource("3_vwfv5"), ExtResource("4_x2wr5")])
 
 [node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="HPBar" type="ProgressBar" parent="HUD"]
+offset_left = 140.0
+offset_top = 99.0
+offset_right = 180.0
+offset_bottom = 103.0
+max_value = 3.0
+step = 1.0
+show_percentage = false
+script = ExtResource("5_uytog")
 
 [node name="GameTimeLabel" type="Label" parent="HUD"]
 offset_left = -2.0
