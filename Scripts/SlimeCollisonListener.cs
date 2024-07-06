@@ -1,16 +1,11 @@
 using Godot;
 using System;
 
-public partial class experience : Area2D
+public partial class SlimeCollisonListener : Area2D
 {
 	// Called when the node enters the scene tree for the first time.
-	public int xpGain = 1;
-
-	AudioStreamPlayer2D XPAudioPlayer;
-
 	public override void _Ready()
 	{
-		XPAudioPlayer = GetNode<AudioStreamPlayer2D>("/root/World/XPAudioPlayer");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,12 +17,7 @@ public partial class experience : Area2D
 	{
 		if (body.IsInGroup("players"))
 		{
-			XPAudioPlayer.Play();
-			body.Call("IncreaseXP", xpGain);
-			QueueFree();
+			body.Call("TakeDamage");
 		}
 	}
 }
-
-
-

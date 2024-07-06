@@ -35,5 +35,5 @@ animations = [{
 [node name="RedSlimeBody2D" instance=ExtResource("1_voo5y")]
 slimeHP = 6.0
 
-[node name="Slime" parent="." index="1"]
+[node name="Slime" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_v0hg7")

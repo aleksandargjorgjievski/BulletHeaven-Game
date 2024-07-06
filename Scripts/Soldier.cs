@@ -6,9 +6,15 @@ public partial class Soldier : CharacterBody2D
 {
 	public const float Speed = 33.0f;
 
+	public int max_hp = 3;
+
+	public int hp;
+
 	public int xp_value = 0;
 
 	public int max_xp_value = 5;
+
+	ProgressBar hp_bar;
 
 	PackedScene arrow_scene;
 
@@ -16,8 +22,10 @@ public partial class Soldier : CharacterBody2D
 
 	AnimatedSprite2D soldier;
 
-	RichTextLabel xp_text;
+	AudioStreamPlayer2D LevelUpPlayer;
 
+	RichTextLabel xp_text;
+	
 	RichTextLabel max_xp_text;
 	public override void _Ready()
 	{
@@ -25,6 +33,11 @@ public partial class Soldier : CharacterBody2D
 		soldier = GetNode<AnimatedSprite2D>("Soldier");
 		xp_text = GetNode<RichTextLabel>("/root/World/HUD/XPLabel/Value");
 		max_xp_text = GetNode<RichTextLabel>("/root/World/HUD/XPLabel/MaxValue");
+		LevelUpPlayer = GetNode<AudioStreamPlayer2D>("/root/World/LevelUpPlayer");
+		hp_bar = GetNode<ProgressBar>("../HUD/HPBar");
+		hp_bar.MaxValue = max_hp;
+		hp = max_hp;
+		SetHpBar();
 		GetNode<Timer>("ArrowsTimer").Start();
 	}
 
@@ -131,12 +144,28 @@ public partial class Soldier : CharacterBody2D
 		arrow.Transform = GetNode<Marker2D>("ProjectilesSpawnLocation").GlobalTransform;
 	}
 
+	public void SetHpBar()
+	{
+		hp_bar.Value = hp;
+	}
+
+	public void TakeDamage ()
+	{
+		hp -= 1;
+		SetHpBar();
+		if (hp <= 0)
+		{
+			GetTree().ChangeSceneToFile("res://Scenes/game_over.tscn");
+		}
+	}
+
 	public void IncreaseXP (int xpGain)
 	{
 		xp_value += xpGain;
 		xp_text.Text = xp_value.ToString("0/");
 		if (xp_value >= max_xp_value)
 		{
+			LevelUpPlayer.Play();
 			xp_value = 0;
 			xp_text.Text = xp_value.ToString("0/");
 			max_xp_value += 1;

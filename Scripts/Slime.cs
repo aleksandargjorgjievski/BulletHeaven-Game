@@ -18,11 +18,14 @@ public partial class Slime : CharacterBody2D
 	public AnimationPlayer hitAnimation;
 
 	public PackedScene xp_scene;
+
+	public AudioStreamPlayer2D slimeAudioPlayer;
 	
 	public override void _Ready()
 	{
 		slime = GetNode<AnimatedSprite2D>("Slime");
 		hitAnimation = GetNode<AnimationPlayer>("AnimationPlayer");
+		slimeAudioPlayer = GetNode<AudioStreamPlayer2D>("/root/World/SlimeAudioPlayer");
 	}
 
 
@@ -60,7 +63,7 @@ public partial class Slime : CharacterBody2D
 	{
 		slimeHP -= projectileDmg;
 		hitAnimation.Play("hit");
-
+		slimeAudioPlayer.Play();
 		if (slimeHP <= 0)
 		{
 			xp_scene = GD.Load<PackedScene>("res://Scenes/experience.tscn");
