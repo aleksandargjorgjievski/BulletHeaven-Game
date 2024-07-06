@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://wscjr8mtf1bl"]
+
+[ext_resource type="Texture2D" uid="uid://pivef5vx6wr" path="res://UI Sprites/TryAgain.png" id="1_6gthr"]
+[ext_resource type="Texture2D" uid="uid://phfd14u2juru" path="res://UI Sprites/TryAgainHover.png" id="2_vjlbx"]
+[ext_resource type="Script" path="res://Scripts/start_button.cs" id="3_jkvga"]
+[ext_resource type="FontFile" uid="uid://ba07xvs0e5ayo" path="res://Fonts/VT323-Regular.ttf" id="3_uufqs"]
+[ext_resource type="Texture2D" uid="uid://d4luxy3e2osdd" path="res://UI Sprites/QuitButton.png" id="4_tdl0d"]
+[ext_resource type="Texture2D" uid="uid://c8b7daspf8env" path="res://UI Sprites/QuitButtonHover.png" id="5_dhjlu"]
+[ext_resource type="Script" path="res://Scripts/QuitButton.cs" id="6_63x0s"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -30.0
+offset_right = 83.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RestartButton" type="TextureButton" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_6gthr")
+texture_pressed = ExtResource("2_vjlbx")
+script = ExtResource("3_jkvga")
+
+[node name="QuitButton" type="TextureButton" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture_normal = ExtResource("4_tdl0d")
+texture_pressed = ExtResource("5_dhjlu")
+script = ExtResource("6_63x0s")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 5
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -62.0
+offset_top = 36.0
+offset_right = 1358.0
+offset_bottom = 496.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_uufqs")
+theme_override_font_sizes/font_size = 32
+text = "GAME OVER"
+
+[connection signal="pressed" from="MarginContainer/RestartButton" to="MarginContainer/RestartButton" method="OnPressed"]
+[connection signal="pressed" from="MarginContainer/QuitButton" to="MarginContainer/QuitButton" method="OnPressed"]

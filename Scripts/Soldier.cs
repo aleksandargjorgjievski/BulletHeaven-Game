@@ -153,6 +153,10 @@ public partial class Soldier : CharacterBody2D
 	{
 		hp -= 1;
 		SetHpBar();
+		if (hp <= 0)
+		{
+			GetTree().ChangeSceneToFile("res://Scenes/game_over.tscn");
+		}
 	}
 
 	public void IncreaseXP (int xpGain)
