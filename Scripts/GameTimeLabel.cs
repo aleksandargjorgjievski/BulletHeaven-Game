@@ -25,7 +25,7 @@ public partial class GameTimeLabel : Label
 
 	public void StopClock (int minutes)
 	{
-		if (minutes >= 1)
+		if (minutes >= 3)
 		{
 			GetTree().ChangeSceneToFile("res://Scenes/win.tscn");
 			SetProcess(false);

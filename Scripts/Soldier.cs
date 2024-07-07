@@ -3,7 +3,9 @@ using System;
 using System.Numerics;
 
 public partial class Soldier : CharacterBody2D
-{
+{	
+
+	Globals g;
 	public const float Speed = 33.0f;
 
 	public int max_hp = 3;
@@ -29,6 +31,7 @@ public partial class Soldier : CharacterBody2D
 	RichTextLabel max_xp_text;
 	public override void _Ready()
 	{
+		g = (Globals)GetNode("/root/Globals");
 		arrow_scene = GD.Load<PackedScene>("res://Scenes/projectiles.tscn");
 		soldier = GetNode<AnimatedSprite2D>("Soldier");
 		xp_text = GetNode<RichTextLabel>("/root/World/HUD/XPLabel/Value");
@@ -171,5 +174,11 @@ public partial class Soldier : CharacterBody2D
 			max_xp_value += 1;
 		}
 		max_xp_text.Text = max_xp_value.ToString();
+	}
+
+	public void IncreaseScore (float slimeScore)
+	{
+	    g.totalScore += slimeScore;
+		GetNode<RichTextLabel>("/root/World/HUD/GameTimeLabel/Score").Text = "Score: " + g.totalScore.ToString();
 	}
 }

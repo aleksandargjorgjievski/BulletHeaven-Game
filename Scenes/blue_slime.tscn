@@ -34,6 +34,7 @@ animations = [{
 
 [node name="BlueSlimeBody2D" instance=ExtResource("1_i3qgv")]
 slimeHP = 3.0
+slimeScore = 30.0
 
-[node name="Slime" parent="." index="1"]
+[node name="Slime" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_pecaq")
