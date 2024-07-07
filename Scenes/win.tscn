@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://3qugxphprdsk"]
+[gd_scene load_steps=2 format=3 uid="uid://3qugxphprdsk"]
 
 [ext_resource type="PackedScene" uid="uid://wscjr8mtf1bl" path="res://Scenes/game_over.tscn" id="1_5sxsq"]
-[ext_resource type="FontFile" uid="uid://ba07xvs0e5ayo" path="res://Fonts/VT323-Regular.ttf" id="2_jn4jl"]
 
 [node name="Control2" instance=ExtResource("1_5sxsq")]
 
@@ -13,11 +12,7 @@ offset_bottom = 483.0
 text = " YOU WON!"
 
 [node name="ScoreLabel" parent="." index="2"]
-texture_filter = 5
 offset_left = 129.0
 offset_top = 57.0
 offset_right = 209.0
 offset_bottom = 97.0
-theme_override_fonts/normal_font = ExtResource("2_jn4jl")
-theme_override_font_sizes/normal_font_size = 20
-text = "Score: 0"
