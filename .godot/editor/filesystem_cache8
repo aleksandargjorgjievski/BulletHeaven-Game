@@ -1,5 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1720381327
+::res://::1720382829
+export_presets.cfg::TextFile::-1::1720381395::0::1::::<><>::
 git_log.txt::TextFile::-1::1720381246::0::1::::<><>::
 icon.svg::CompressedTexture2D::4983055484291208951::1720381246::1720381246::1::::<><>::
 OFL.txt::TextFile::-1::1720381245::0::1::::<><>::
@@ -7,9 +8,9 @@ README.md::TextFile::-1::1720381245::0::1::::<><>::
 ::res://Chracter Sprites/::1720381245
 ::res://Chracter Sprites/Soldier Walking/::1720381245
 Soldier-Walk.png::CompressedTexture2D::5974700118228996347::1720381245::1720381245::1::::<><>::
-::res://data_Bulletheaven Game_windows_x86_64/::1720381247
-Bulletheaven Game.deps.json::JSON::-1::1720381245::0::1::::<><>::
-Bulletheaven Game.runtimeconfig.json::JSON::-1::1720381245::0::1::::<><>::
+::res://data_Bulletheaven Game_windows_x86_64/::1720381467
+Bulletheaven Game.deps.json::JSON::-1::1720381386::0::1::::<><>::
+Bulletheaven Game.runtimeconfig.json::JSON::-1::1720381386::0::1::::<><>::
 ::res://Enemy Sprites/::1720381245
 ::res://Enemy Sprites/Slime/::1720381245
 Blue-Slime-sheet.png::CompressedTexture2D::6906221750963114693::1720381245::1720381245::1::::<><>::
@@ -21,17 +22,17 @@ green_gem.png::CompressedTexture2D::1296014265695703535::1720381245::1720381245:
 VT323-Regular.ttf::FontFile::2440015276512178318::1720381245::1720381245::1::::<><>::
 ::res://Projectiles/::1720381245
 Arrow.png::CompressedTexture2D::955769959431537470::1720381245::1720381245::1::::<><>::
-::res://ReadmeImages/::1720381245
-Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.001.png::CompressedTexture2D::193556674673383054::1720381245::1720381328::1::::<><>::
-Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.002.jpeg::CompressedTexture2D::3281618896315844442::1720381245::1720381328::1::::<><>::
-Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.003.png::CompressedTexture2D::7209121586499307591::1720381245::1720381328::1::::<><>::
-Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.004.png::CompressedTexture2D::4086721334113739103::1720381245::1720381328::1::::<><>::
-Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.005.png::CompressedTexture2D::5380152587492688710::1720381245::1720381328::1::::<><>::
-Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.006.png::CompressedTexture2D::7812548868551923980::1720381245::1720381328::1::::<><>::
-Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.007.jpeg::CompressedTexture2D::6097587705627003549::1720381245::1720381328::1::::<><>::
-Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.008.jpeg::CompressedTexture2D::142213052181609490::1720381245::1720381328::1::::<><>::
-Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.009.jpeg::CompressedTexture2D::20411369173204826::1720381245::1720381328::1::::<><>::
-Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.010.jpeg::CompressedTexture2D::4862924862101225869::1720381245::1720381328::1::::<><>::
+::res://ReadmeImages/::1720381467
+Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.001.png::CompressedTexture2D::193556674673383054::1720381245::1720381467::1::::<><>::
+Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.002.jpeg::CompressedTexture2D::3281618896315844442::1720381245::1720381467::1::::<><>::
+Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.003.png::CompressedTexture2D::7209121586499307591::1720381245::1720381467::1::::<><>::
+Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.004.png::CompressedTexture2D::4086721334113739103::1720381245::1720381467::1::::<><>::
+Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.005.png::CompressedTexture2D::5380152587492688710::1720381245::1720381467::1::::<><>::
+Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.006.png::CompressedTexture2D::7812548868551923980::1720381245::1720381467::1::::<><>::
+Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.007.jpeg::CompressedTexture2D::6097587705627003549::1720381245::1720381467::1::::<><>::
+Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.008.jpeg::CompressedTexture2D::142213052181609490::1720381245::1720381467::1::::<><>::
+Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.009.jpeg::CompressedTexture2D::20411369173204826::1720381245::1720381467::1::::<><>::
+Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.010.jpeg::CompressedTexture2D::4862924862101225869::1720381245::1720381467::1::::<><>::
 ::res://Scenes/::1720381245
 blue_slime.tscn::PackedScene::7867328447349899098::1720381245::0::1::::<><>::uid://h5440vyfk874::::res://Scenes/green_slime.tscn<>uid://c5nop0qwtg1ft::::res://Enemy Sprites/Slime/Blue-Slime-sheet.png
 experience.tscn::PackedScene::8143895854801310996::1720381245::0::1::::<><>::uid://sp2fvo8g0r0r::::res://Experience Sprites/green_gem.png<>res://Scripts/experience.cs
@@ -43,9 +44,9 @@ red_slime.tscn::PackedScene::6453159019630259510::1720381245::0::1::::<><>::uid:
 user_interace.tscn::PackedScene::5542488174457564616::1720381245::0::1::::<><>::uid://b6t3ocuqcuxku::::res://UI Sprites/StartButton.png<>uid://dmnro2ksl13yv::::res://UI Sprites/StartButtonHover.png<>res://Scripts/start_button.cs
 win.tscn::PackedScene::1999543952096506642::1720381245::0::1::::<><>::uid://wscjr8mtf1bl::::res://Scenes/game_over.tscn
 xp.tscn::PackedScene::836129371108481159::1720381245::0::1::::<><>::
-::res://Scripts/::1720381245
+::res://Scripts/::1720381467
 experience.cs::CSharpScript::-1::1720381245::0::1::::<>Area2D<>::
-GameTimeLabel.cs::CSharpScript::-1::1720381303::0::1::::<>Label<>::
+GameTimeLabel.cs::CSharpScript::-1::1720381467::0::1::::<>Label<>::
 Globals.cs::CSharpScript::-1::1720381245::0::1::::<>Node<>::
 HPBar.cs::CSharpScript::-1::1720381245::0::1::::<>ProgressBar<>::
 main.cs::CSharpScript::-1::1720381245::0::1::::<>Node2D<>::
