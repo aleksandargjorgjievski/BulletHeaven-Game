@@ -12,11 +12,13 @@ public partial class Soldier : CharacterBody2D
 
 	public int hp;
 
-	public int xp_value = 0;
-
 	public int max_xp_value = 5;
 
+	public int xp_value = 0;
+
 	ProgressBar hp_bar;
+
+	ProgressBar xp_bar;
 
 	PackedScene arrow_scene;
 
@@ -26,21 +28,19 @@ public partial class Soldier : CharacterBody2D
 
 	AudioStreamPlayer2D LevelUpPlayer;
 
-	RichTextLabel xp_text;
-	
-	RichTextLabel max_xp_text;
 	public override void _Ready()
 	{
 		g = (Globals)GetNode("/root/Globals");
 		arrow_scene = GD.Load<PackedScene>("res://Scenes/projectiles.tscn");
 		soldier = GetNode<AnimatedSprite2D>("Soldier");
-		xp_text = GetNode<RichTextLabel>("/root/World/HUD/XPLabel/Value");
-		max_xp_text = GetNode<RichTextLabel>("/root/World/HUD/XPLabel/MaxValue");
 		LevelUpPlayer = GetNode<AudioStreamPlayer2D>("/root/World/LevelUpPlayer");
 		hp_bar = GetNode<ProgressBar>("../HUD/HPBar");
+		xp_bar = GetNode<ProgressBar>("../HUD/XPBar");
 		hp_bar.MaxValue = max_hp;
+		xp_bar.MaxValue = max_xp_value;
 		hp = max_hp;
 		SetHpBar();
+		SetXPBar();
 		GetNode<Timer>("ArrowsTimer").Start();
 	}
 
@@ -165,15 +165,20 @@ public partial class Soldier : CharacterBody2D
 	public void IncreaseXP (int xpGain)
 	{
 		xp_value += xpGain;
-		xp_text.Text = xp_value.ToString("0/");
+		SetXPBar();
 		if (xp_value >= max_xp_value)
 		{
 			LevelUpPlayer.Play();
 			xp_value = 0;
-			xp_text.Text = xp_value.ToString("0/");
 			max_xp_value += 1;
+			xp_bar.MaxValue = max_xp_value;
+			SetXPBar();
 		}
-		max_xp_text.Text = max_xp_value.ToString();
+	}
+
+	public void SetXPBar()
+	{
+		xp_bar.Value = xp_value;
 	}
 
 	public void IncreaseScore (float slimeScore)
