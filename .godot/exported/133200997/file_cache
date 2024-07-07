@@ -1,10 +1,10 @@
 res://Scenes/blue_slime.tscn::6eba0cd691548d23aaf73a50a6476652::1720381245::res://.godot/exported/133200997/export-fa4ceaed54471cfc05d29b05e9af3444-blue_slime.scn
 res://Scenes/experience.tscn::91cc589f64c3f194fadfa154ecfdb92f::1720381245::res://.godot/exported/133200997/export-6c08264bc42387efe5088cf2d0270254-experience.scn
-res://Scenes/game_over.tscn::710ef23ff29ca7cf6a054d6cbabc48ae::1720381245::res://.godot/exported/133200997/export-33c320c97f44f546398d5119030678b4-game_over.scn
+res://Scenes/game_over.tscn::d90c96eb4ca6bd64af7645e2e351cd22::1720382920::res://.godot/exported/133200997/export-33c320c97f44f546398d5119030678b4-game_over.scn
 res://Scenes/green_slime.tscn::b858f0f5d0234bdf0363baf780662a75::1720381245::res://.godot/exported/133200997/export-1439e717835a4e1cf184c9ea9bc6b4bf-green_slime.scn
 res://Scenes/main.tscn::4ef15d8fc853f5113c6352fbf1ff4ab6::1720381245::res://.godot/exported/133200997/export-2ddd04d543d5858e7f20c9299a8b5096-main.scn
 res://Scenes/projectiles.tscn::6feaf4100e8b0d6f5b4000291f48a29e::1720381245::res://.godot/exported/133200997/export-a7c72b5fa00556ed69aad62ffbef1885-projectiles.scn
 res://Scenes/red_slime.tscn::791a7293db8f1641ea26f866179a0368::1720381245::res://.godot/exported/133200997/export-a38a8c85f1b6474ee1b5530e06a06ba1-red_slime.scn
 res://Scenes/user_interace.tscn::1973396d17138819e57a9e35852d158a::1720381245::res://.godot/exported/133200997/export-bdb5f7b373aa06b1baea911bea879344-user_interace.scn
-res://Scenes/win.tscn::90ba351fdcb5b0935da5c18e9c206303::1720381245::res://.godot/exported/133200997/export-3ef41e412a2be89295573d61ac824435-win.scn
+res://Scenes/win.tscn::733b585687a6a05b39a71fa34853ac44::1720382918::res://.godot/exported/133200997/export-3ef41e412a2be89295573d61ac824435-win.scn
 res://Scenes/xp.tscn::7d31bbdba9a5c0f87fa26ec6468a5759::1720381245::res://.godot/exported/133200997/export-9e5aa0b1281d4a89887ab59f5d4bc8eb-xp.scn
