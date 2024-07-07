@@ -1,0 +1,38 @@
+fff80ef Added credits in README
+b830d10 Updated README
+cc948fe Added a README file
+bef24e3 Updated exe file
+27b7eff Added a XP bar
+8b08c59 Using lfs to track .exe files
+ecf69be Added an exe file
+3455954 Added a score
+ea07365 Added a win scene
+3911d9d Added a game over screen with restart and quit
+9ff88f5 Added a HP bar
+a1968ed Added sound effects and music
+6279955 Added a wave of different enemies
+a652f2f Added a simple xp system
+fe676d5 Added a static map
+445e455 Added slime health
+0b95460 Enemies spawn around the player
+8b12409 Added a camera that moves along side the player
+ded3277 Added a functional timer
+a6c53c5 Added a simple text label
+86b2973 Projectiles move in 8 directions
+5c6b91b Added projectiles that move in one direction
+9e09610 Simple 'New Game' button
+e65405e Enemies spawning around the player
+c158b3f Enemy is following the player from a different scene
+aecc079 Signal in player script and enemy scene
+5fa0bb9 Enemy movement towards player
+f75af00 Prototype of enemy following the player
+3fe84aa Added the enemy and it's animation
+50c6d87 Updated gitignore
+3325091 Added a gitignore file
+336ebc3 Walking Animation
+bfd6086 Misc
+83b27d1 Walking in every direction
+d2b2814 left and right movement
+ce5850d Starting a new project
+
+
