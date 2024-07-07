@@ -1,0 +1,12 @@
+ProgressBar
+RichTextLabel
+Label
+TextureButton
+Button
+MarginContainer
+Control
+HBoxContainer
+VBoxContainer
+CollisionShape2D
+Area2D
+AudioStreamPlayer2D

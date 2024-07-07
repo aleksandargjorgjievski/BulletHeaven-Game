@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "utYvAb5bjis8TEnyc9uDkMB9ggnyWIr6pQbxF5J4aRBiEibi+64gl6vaRUUeepQ1ZYBb/rSGvGxWU9hMcQ+9PQ==",
+  "success": true,
+  "projectFilePath": "D:\\Godot Projects\\BulletHeaven-Game\\Bulletheaven Game.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\godot.sourcegenerators\\4.2.2\\godot.sourcegenerators.4.2.2.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\godotsharp\\4.2.2\\godotsharp.4.2.2.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.28\\microsoft.netcore.app.runtime.win-x64.6.0.28.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.28\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.28.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.28\\microsoft.aspnetcore.app.runtime.win-x64.6.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}

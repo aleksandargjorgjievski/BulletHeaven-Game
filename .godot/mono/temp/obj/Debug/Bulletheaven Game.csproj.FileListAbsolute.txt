@@ -1,0 +1,18 @@
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\bin\Debug\Bulletheaven Game.deps.json
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\bin\Debug\Bulletheaven Game.runtimeconfig.json
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\bin\Debug\Bulletheaven Game.dll
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\bin\Debug\Bulletheaven Game.pdb
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\bin\Debug\GodotSharp.dll
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\Bulletheaven Game.csproj.AssemblyReference.cache
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\Bulletheaven Game.GeneratedMSBuildEditorConfig.editorconfig
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\Bulletheaven Game.AssemblyInfoInputs.cache
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\Bulletheaven Game.AssemblyInfo.cs
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\Bulletheaven Game.csproj.CoreCompileInputs.cache
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\Bulletheaven Game.sourcelink.json
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\Bullethe.4FBDCC8D.Up2Date
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\Bulletheaven Game.dll
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\refint\Bulletheaven Game.dll
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\Bulletheaven Game.pdb
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\Bulletheaven Game.genruntimeconfig.cache
+D:\Godot Projects\BulletHeaven-Game\.godot\mono\temp\obj\Debug\ref\Bulletheaven Game.dll
