@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml;
+using System.Xml.Schema;
 
 
 
@@ -9,6 +10,10 @@ public partial class Slime : CharacterBody2D
 {
 	[Export]
 	private float slimeHP = 2;
+
+	[Export]
+	private float slimeScore;
+
 	public const float Speed = 20.0f;
 
 	public Node2D xp;
@@ -70,6 +75,7 @@ public partial class Slime : CharacterBody2D
 			xp = xp_scene.Instantiate<Node2D>();
 			GetNode<Node2D>("/root/World/PickUps").CallDeferred("add_child", xp);
 			xp.GlobalPosition = GlobalPosition;
+			GetTree().GetFirstNodeInGroup("players").Call("IncreaseScore", slimeScore);
 			QueueFree();	
 		}
 	}

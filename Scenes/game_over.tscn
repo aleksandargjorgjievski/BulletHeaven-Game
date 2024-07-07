@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://wscjr8mtf1bl"]
+[gd_scene load_steps=9 format=3 uid="uid://wscjr8mtf1bl"]
 
 [ext_resource type="Texture2D" uid="uid://pivef5vx6wr" path="res://UI Sprites/TryAgain.png" id="1_6gthr"]
 [ext_resource type="Texture2D" uid="uid://phfd14u2juru" path="res://UI Sprites/TryAgainHover.png" id="2_vjlbx"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d4luxy3e2osdd" path="res://UI Sprites/QuitButton.png" id="4_tdl0d"]
 [ext_resource type="Texture2D" uid="uid://c8b7daspf8env" path="res://UI Sprites/QuitButtonHover.png" id="5_dhjlu"]
 [ext_resource type="Script" path="res://Scripts/QuitButton.cs" id="6_63x0s"]
+[ext_resource type="Script" path="res://Scripts/ScoreLabel.cs" id="8_ofhpv"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -52,14 +53,26 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -62.0
-offset_top = 36.0
-offset_right = 1358.0
-offset_bottom = 496.0
+offset_left = -59.0
+offset_top = 24.0
+offset_right = 1361.0
+offset_bottom = 484.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_uufqs")
 theme_override_font_sizes/font_size = 32
 text = "GAME OVER"
+
+[node name="ScoreLabel" type="RichTextLabel" parent="."]
+texture_filter = 5
+layout_mode = 0
+offset_left = 127.0
+offset_top = 56.0
+offset_right = 225.0
+offset_bottom = 96.0
+theme_override_fonts/normal_font = ExtResource("3_uufqs")
+theme_override_font_sizes/normal_font_size = 20
+text = "Score: 0"
+script = ExtResource("8_ofhpv")
 
 [connection signal="pressed" from="MarginContainer/RestartButton" to="MarginContainer/RestartButton" method="OnPressed"]
 [connection signal="pressed" from="MarginContainer/QuitButton" to="MarginContainer/QuitButton" method="OnPressed"]
