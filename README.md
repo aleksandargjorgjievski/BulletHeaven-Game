@@ -48,7 +48,9 @@
 
 Функцијата за зголемување на XP (experience) е поврзана со помош на сигнал со површината на XP gems.   
 
-*Слика 6: Сигнал во XP gems ![](ReadmeImages/Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.005.png)*
+![](ReadmeImages/Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.005.png)
+
+*Слика 6: Сигнал во XP gems*
 
 Додека пак во класата за играчот се зголемува XP на играчот и кога ќе достигне одредена граница, тогаш се зголемува нивото на играчот. 
 
@@ -60,7 +62,9 @@
 
 Првин со цел да ја започнете играта, истата ќе треба да ја отворите со помош на Bulletheaven-Game.exe. Кога ќе ја отворите играта тогаш за да започнете со играње ќе треба да кликнете на копчето за започнување на играта. 
 
-*Слика 8.1: Сцена за започнување на играта![](ReadmeImages/Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.007.jpeg)*
+![](ReadmeImages/Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.007.jpeg)*
+
+*Слика 8.1: Сцена за започнување на играта*
 
 Кога ќе се вклучи играта, за да го контролирате карактерот, ги користите копчињата: W – за одење нагоре, S – за одење надолу, A – за одење налево, D – за одење надесно. Во зависност на која насока гледате во таа насока ќе стрелате. Со секој уништен непријател, добивате одреден score, во зависност од нивната тежина.
 
@@ -70,10 +74,27 @@
 
 Ако вашиот HP биде нула, тогаш ќе се покаже сцената за изгубена игра.  
 
-*Слика 8.3: Излед за сцена кога ќе изгубите ![](ReadmeImages/Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.009.jpeg)*
+![](ReadmeImages/Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.009.jpeg)*
+
+*Слика 8.3: Излед за сцена кога ќе изгубите*
 
 Додека пак ,ако успеете да преживеете доволно, тогаш ќе се покаже сцената за победа.  
 
 ![](ReadmeImages/Aspose.Words.4395c707-db37-48fb-85b5-7501c2b5ba0f.010.jpeg)
 
 *Слика 8.4: Сцена за победа* 
+
+Credits:
+
+Sound effects:
+
+Slime Death (1) by DrMinky -- https://freesound.org/s/167074/ -- License: Attribution 4.0
+Retro Coin Collect by DrMinky -- https://freesound.org/s/166184/ -- License: Attribution 4.0
+LevelUp.wav by Kenneth_Cooney -- https://freesound.org/s/609335/ -- License: Creative Commons 0
+
+Music:
+
+Minstrel's Song by Keys of Moon | https://soundcloud.com/keysofmoon
+Music promoted by https://www.chosic.com/free-music/all/
+Creative Commons CC BY 4.0
+https://creativecommons.org/licenses/by/4.0/
